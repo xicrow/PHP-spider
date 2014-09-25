@@ -1,7 +1,7 @@
 <?php
 /**
  * Cosy Spider
- * @author Jan Ebsen
+ * @author Jan Ebsen <xicrow@gmail.com>
  * @version 1.0.0
  * @date 2013-04-21
  */
