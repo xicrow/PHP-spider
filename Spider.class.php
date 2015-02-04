@@ -16,7 +16,7 @@ class Cosy_Spider {
 	/**
 	 * Options for the Spider, default values are set below
 	 * @access private
-	 * @var Array
+	 * @var array
 	 */
 	private $options = [
 		// Crawl type (all | external | internal | site | deeper)
@@ -36,42 +36,42 @@ class Cosy_Spider {
 	/**
 	 * Information for the current site
 	 * @access private
-	 * @var Object
+	 * @var object
 	 */
 	private $currentSite = null;
 
 	/**
 	 * Information for the current site page
 	 * @access private
-	 * @var Object
+	 * @var object
 	 */
 	private $currentSitePage = null;
 
 	/**
 	 * HTML source code for the current site page
 	 * @access private
-	 * @var String
+	 * @var string
 	 */
 	private $currentSitePageHtml = null;
 
 	/**
 	 * Counter for how many pages has been crawled
 	 * @access private
-	 * @var Integer
+	 * @var integer
 	 */
 	private $pageCounter = 0;
 
 	/**
 	 * Array with site URL's not to crawl
 	 * @access public
-	 * @var Array
+	 * @var array
 	 */
 	public $dontCrawlSiteUrl = [];
 
 	/**
 	 * Display debugging information
 	 * @access public
-	 * @var Boolean
+	 * @var boolean
 	 */
 	public $debug = false;
 	public $debugCrawler = false;
@@ -81,8 +81,7 @@ class Cosy_Spider {
 	 * Constructor, optionally pass database handler and options to this
 	 * @access public
 	 * @param PDO $dbh
-	 * @param Array $options
-	 * @return true
+	 * @param array $options
 	 */
 	public function __construct(PDO $dbh = null, Array $options = []) {
 		if ($dbh instanceof PDO) {
@@ -92,15 +91,13 @@ class Cosy_Spider {
 		if (is_array($options)) {
 			$this->setOptions($options);
 		}
-
-		return true;
 	}
 
 	/**
 	 * Set the database handler
 	 * @access public
 	 * @param PDO $dbh
-	 * @return true
+	 * @return boolean
 	 */
 	public function setDatabaseHandler(PDO $dbh) {
 		$this->dbh = $dbh;
@@ -111,8 +108,8 @@ class Cosy_Spider {
 	/**
 	 * Set array with options
 	 * @access public
-	 * @param Array $options
-	 * @return true
+	 * @param array $options
+	 * @return boolean
 	 */
 	public function setOptions(Array $options) {
 		$this->options = array_merge($this->options, $options);
@@ -125,7 +122,7 @@ class Cosy_Spider {
 	 * @access public
 	 * @param String $key
 	 * @param Mixed $value
-	 * @return true
+	 * @return boolean
 	 */
 	public function setOption($key, $value) {
 		$key = (string)$key;
@@ -143,7 +140,7 @@ class Cosy_Spider {
 	 * Get a single option
 	 * @access public
 	 * @param String $key
-	 * @return true
+	 * @return boolean
 	 */
 	public function getOption($key) {
 		$key = (string)$key;
@@ -159,7 +156,7 @@ class Cosy_Spider {
 	 * Set current URL and current URL base
 	 * @access public
 	 * @param String $url
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function setCurrentUrl($url) {
 		$url = (string)$url;
@@ -224,7 +221,7 @@ class Cosy_Spider {
 	/**
 	 * Start crawling
 	 * @access public
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function crawl() {
 		// Check if current site, and current site page has been set
@@ -335,7 +332,7 @@ class Cosy_Spider {
 	/**
 	 * Continue to the next site/site page
 	 * @access public
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function crawlNext() {
 		// Check if page limit is reached
@@ -382,7 +379,7 @@ class Cosy_Spider {
 	 * Harvest links from the HTML source code
 	 * @access private
 	 * @param String $html
-	 * @return Boolean
+	 * @return boolean
 	 */
 	private function harvest($html) {
 		$html = (string)$html;
@@ -678,7 +675,7 @@ class Cosy_Spider {
 	 * Get or create a site, from the given URL
 	 * @access private
 	 * @param String $url
-	 * @return Object
+	 * @return object
 	 */
 	private function getSite($url) {
 		$url = (string)$url;
@@ -730,7 +727,7 @@ class Cosy_Spider {
 	 * Get or create a site page, from the given URL
 	 * @access private
 	 * @param String $url
-	 * @return Object
+	 * @return object
 	 */
 	private function getSitePage($url) {
 		$url = (string)$url;
@@ -783,8 +780,8 @@ class Cosy_Spider {
 
 	/**
 	 * Update status on current site
-	 * @return boolean
 	 * @access private
+	 * @return boolean
 	 */
 	private function updateSiteStatus() {
 		// Check if re-crawl date is set
@@ -1033,7 +1030,7 @@ class Cosy_Spider {
 	/**
 	 * Get next URL to crawl
 	 * @access private
-	 * @return String
+	 * @return string
 	 */
 	private function getNextUrl() {
 		// If crawl type is: deeper
