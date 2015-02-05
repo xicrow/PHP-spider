@@ -1,0 +1,26 @@
+{
+  "name": "xicrow/PHP-spider",
+  "description": "Web crawler built with PHP",
+  "version": "0.0.1",
+  "type": "library",
+  "keywords": ["php", "spider", "crawler"],
+  "authors": [
+    {
+      "name": "Jan Ebsen",
+      "email": "xicrow@gmail.com",
+      "homepage": "http://jan-ebsen.dk",
+      "role": "developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/xicrow/PHP-spider/issues"
+  },
+  "require": {
+    "php": ">=5.4",
+    "ext-PDO": "~1.0",
+    "ext-pdo_mysql": "~1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  }
+}
