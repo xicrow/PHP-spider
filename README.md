@@ -2,7 +2,7 @@
 
 Basically a crawler built with PHP and MySQL
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/xicrow/PHP-spider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/xicrow/PHP-spider/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/xicrow/PHP-spider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/xicrow/PHP-spider/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/xicrow/PHP-spider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/xicrow/PHP-spider/?branch=master)
 
 ## Installing via Composer
 
