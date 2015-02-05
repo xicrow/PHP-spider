@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "type": "library",
   "keywords": ["php", "spider", "crawler"],
+  "license": "MIT",
   "authors": [
     {
       "name": "Jan Ebsen",
