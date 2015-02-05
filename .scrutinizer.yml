@@ -1,2 +1,6 @@
 tools:
-    external_code_coverage: true
+    php_code_sniffer:
+        config:
+            standard: "PSR2" # Other Values: PSR2, PEAR, Zend, WordPress, Drupal, TYPO3CMS
+    sensiolabs_security_checker: true
+    external_code_coverage: false
